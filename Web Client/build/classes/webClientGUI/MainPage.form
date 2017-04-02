@@ -1,0 +1,1862 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="mainMenuBar">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="file">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="logOut">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Log Out"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logOutActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="logOutAndExit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Log Out And Exit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logOutAndExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="navigateTo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Navigate To"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="employeePage">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Employee Page"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="employeePageActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="customerListPage">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer List Page"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerListPageActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="customerAccountPage">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer Account Page"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerAccountPageActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Main Menu"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="mainMenuBar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="mainPagePanel" min="-2" pref="444" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="mainPagePanel" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="mainPagePanel">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="defaultPanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="defaultPanel"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="welcomeLabel" min="-2" pref="78" max="-2" attributes="0"/>
+                      <EmptySpace pref="280" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="welcomeLabel" min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace pref="419" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="welcomeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="welcome Label"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="employeePagePanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="employeePagePanel"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="employeeTabs" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="employeeTabs" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JTabbedPane" name="employeeTabs">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="createEmployee">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Create Employee">
+                        <Property name="tabTitle" type="java.lang.String" value="Create Employee"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="100" max="32767" attributes="0"/>
+                              <Component id="createEmployee_heading" min="-2" pref="242" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="createEmployee_addEmployeeDetails" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="createEmployee_errorMessage" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="createEmployee_clear" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="createEmployee_addEmployee" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="createEmployee_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="createEmployee_addEmployeeDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="createEmployee_addEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="createEmployee_clear" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="createEmployee_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="135" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="createEmployee_heading">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="24" style="0"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="Create Employee"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="createEmployee_addEmployeeDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Add Employee Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="createEmployee_nameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_positionText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_usernameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_passwordText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_retypePasswordText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="createEmployee_name" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="createEmployee_position" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="createEmployee_username" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="createEmployee_password" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="createEmployee_retypePassword" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createEmployee_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createEmployee_position" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_positionText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createEmployee_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_usernameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createEmployee_passwordText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createEmployee_retypePasswordText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createEmployee_retypePassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="createEmployee_nameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createEmployee_name">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createEmployee_positionText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Position:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createEmployee_position">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createEmployee_usernameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Username:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createEmployee_username">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createEmployee_passwordText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Password:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JPasswordField" name="createEmployee_password">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createEmployee_retypePasswordText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Retype Password:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JPasswordField" name="createEmployee_retypePassword">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createEmployee_retypePasswordActionPerformed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="createEmployee_errorMessage">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Error Message Displayed Here!"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="createEmployee_clear">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Clear"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createEmployee_clearActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="createEmployee_addEmployee">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Add Employee"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createEmployee_addEmployeeActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="editEmployee">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Edit Employee">
+                        <Property name="tabTitle" type="java.lang.String" value="Edit Employee"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="editEmployee_previousEmployee" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="editEmployee_nextEmployee" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="editEmployee_editEmployeeDetails" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="editEmployee_errorMessage" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="editEmployee_saveChanges" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="editEmployee_heading" min="-2" pref="248" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="editEmployee_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="editEmployee_nextEmployee" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="editEmployee_previousEmployee" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="editEmployee_editEmployeeDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="editEmployee_saveChanges" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="editEmployee_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="118" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="editEmployee_heading">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="24" style="0"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="Edit Employee"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="editEmployee_previousEmployee">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="editEmployee_nextEmployee">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="editEmployee_editEmployeeDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Edit Employee Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="editEmployee_nameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_positionText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_usernameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmplyee_passwordText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_retypePasswordText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="editEmployee_name" max="32767" attributes="0"/>
+                                      <Component id="editEmployee_position" max="32767" attributes="0"/>
+                                      <Component id="editEmployee_username" max="32767" attributes="0"/>
+                                      <Component id="editEmployee_password" max="32767" attributes="0"/>
+                                      <Component id="editEmployee_retypePassword" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editEmployee_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editEmployee_position" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_positionText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editEmployee_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_usernameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editEmployee_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmplyee_passwordText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editEmployee_retypePassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployee_retypePasswordText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="editEmployee_nameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editEmployee_name">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editEmployee_nameActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editEmployee_positionText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Position:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editEmployee_position">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editEmployee_positionActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editEmployee_usernameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Username:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editEmployee_username">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editEmplyee_passwordText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Password:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JPasswordField" name="editEmployee_password">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editEmployee_retypePasswordText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Retype Password:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JPasswordField" name="editEmployee_retypePassword">
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="editEmployee_errorMessage">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Error Message Displayed Here!"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="editEmployee_saveChanges">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Save Changes"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editEmployee_saveChangesActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="deleteEmployee">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Delete Employee">
+                        <Property name="tabTitle" type="java.lang.String" value="Delete Employee"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="deleteEmployee_deleteEmployeeDetails" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="deleteEmployee_previousEmployee" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="deleteEmployee_nextEmployee" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="deleteEmployee_errorMessage" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="deleteEmployee_deleteEmployee" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                              <Component id="deleteEmployee_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="132" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="deleteEmployee_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="deleteEmployee_nextEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteEmployee_previousEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteEmployee_deleteEmployeeDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="deleteEmployee_deleteEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteEmployee_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="deleteEmployee_heading">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Delete Employee"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="deleteEmployee_previousEmployee">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="deleteEmployee_nextEmployee">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="deleteEmployee_deleteEmployeeDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Delete Employee Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="deleteEmployee_nameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteEmployee_positionText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteEmployee_usernameText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="deleteEmployee_name" max="32767" attributes="0"/>
+                                      <Component id="deleteEmployee_position" max="32767" attributes="0"/>
+                                      <Component id="deleteEmployee_username" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteEmployee_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteEmployee_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteEmployee_position" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteEmployee_positionText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteEmployee_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteEmployee_usernameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="deleteEmployee_nameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteEmployee_name">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Employee&apos;s Name"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteEmployee_positionText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Position:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteEmployee_position">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Employee&apos;s Position"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteEmployee_usernameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Username:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteEmployee_username">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Employee&apos;s Username"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="deleteEmployee_errorMessage">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Error Message Displayed Here!"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="deleteEmployee_deleteEmployee">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Delete Employee"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="customerListPagePanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="customerListPagePanel"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="customerListScrollPane" alignment="0" pref="424" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="refresh" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="customerListScrollPane" min="-2" pref="477" max="-2" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <Component id="refresh" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="customerListScrollPane">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="customerListTable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="2" rowCount="10">
+                        <Column editable="true" title="Name" type="java.lang.Object"/>
+                        <Column editable="false" title="Account Number" type="java.lang.Object">
+                          <Data value=""/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                          <Data value="null"/>
+                        </Column>
+                      </Table>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="refresh">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Refresh"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="customerAccountPagePanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="customerAccountPagePanel"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="customerTabs" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="customerTabs" min="-2" pref="536" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JTabbedPane" name="customerTabs">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="createCustomer">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Create Customer">
+                        <Property name="tabTitle" type="java.lang.String" value="Create Customer"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="createCustomer_accountDetails" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="createCustomer_errorMessage" pref="251" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="createCustomer_clear" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="createCustomer_addCustomer" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="createCustomer_personalDetails" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="createCustomer_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="createCustomer_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="createCustomer_personalDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="createCustomer_accountDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="createCustomer_addCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="createCustomer_clear" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="createCustomer_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="createCustomer_heading">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Add Customer Details"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="createCustomer_personalDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Personal Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="createCustomer_nameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_birthDateText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_addressText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_mobileText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_emailText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="createCustomer_email" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_name" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_birthDate" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_address" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_mobile" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_birthDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_birthDateText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_addressText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_mobileText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_email" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_emailText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="21" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="createCustomer_nameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_name">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_birthDateText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Birth Date:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_birthDate">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_addressText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Address:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_address">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_mobileText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Mobile:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_mobile">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_emailText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="E-Mail:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_email">
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="createCustomer_accountDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Account Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="createCustomer_accountTypeText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_accountNumberText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_sortCodeText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_balanceText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_cardText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="createCustomer_accountType" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_accountNumber" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_sortCode" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_balance" max="32767" attributes="0"/>
+                                      <Component id="createCustomer_card" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_accountType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_accountTypeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_accountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_accountNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_sortCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_sortCodeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_balance" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_balanceText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="createCustomer_cardText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="createCustomer_card" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="createCustomer_accountTypeText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Account Type:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_accountType">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_accountNumberText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Account Number:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_accountNumber">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_sortCodeText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Sort Code:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_sortCode">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_balanceText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Balance:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="createCustomer_balance">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="createCustomer_cardText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Card:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="createCustomer_card">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="2">
+                                <StringItem index="0" value="Credit"/>
+                                <StringItem index="1" value="Debit"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCustomer_cardActionPerformed"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="createCustomer_errorMessage">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Error Message Displayed Here!"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="createCustomer_clear">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Clear"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="createCustomer_addCustomer">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Add Customer"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="editCustomer">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Edit Customer">
+                        <Property name="tabTitle" type="java.lang.String" value="Edit Customer"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="editCustomer_personalDetails" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="editCustomer_accountDetails" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="editCustomer_errorMessage" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="editCustomer_saveChanges" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="editCustomer_previousCustomer" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="editCustomer_nextCustomer" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                              <Component id="editCustomer_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="editCustomer_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="editCustomer_nextCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="editCustomer_previousCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="editCustomer_personalDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="14" max="32767" attributes="0"/>
+                              <Component id="editCustomer_accountDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="editCustomer_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="editCustomer_saveChanges" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="editCustomer_heading">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Edit Customer Details"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="editCustomer_previousCustomer">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="editCustomer_nextCustomer">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="editCustomer_personalDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Personal Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="editCustomer_nameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_birthDateText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_addressText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_mobileText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_emailText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="editCustomer_name" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_birthDate" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_address" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_mobile" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_email" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_birthDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_birthDateText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_addressText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_mobileText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_email" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_emailText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="editCustomer_nameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_name">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_birthDateText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Birth Date:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_birthDate">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_addressText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Address:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_address">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_mobileText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Mobile:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_mobile">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_emailText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="E-mail:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_email">
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="editCustomer_accountDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Account Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="editCustomer_accountTypeText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_accountNumberText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_sortCodeText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_balanceText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_cardText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="editCustomer_accountType" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_accountNumber" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_sortCode" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_balance" max="32767" attributes="0"/>
+                                      <Component id="editCustomer_card" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="156" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_accountType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_accountTypeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_accountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_accountNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_sortCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_sortCodeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_balance" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_balanceText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="editCustomer_cardText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_card" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="editCustomer_accountTypeText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Account Type:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_accountType">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_accountNumberText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Account Number:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_accountNumber">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_sortCodeText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Sort Code:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_sortCode">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_balanceText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Balance:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="editCustomer_balance">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="editCustomer_cardText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Card:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="editCustomer_card">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="2">
+                                <StringItem index="0" value="Credit"/>
+                                <StringItem index="1" value="Debit"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="editCustomer_errorMessage">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Error Message Displayed Here!"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="editCustomer_saveChanges">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Save Changes"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustomer_saveChangesActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="deleteCustomer">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Delete Customer">
+                        <Property name="tabTitle" type="java.lang.String" value="Delete Customer"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="deleteCustomer_accountDetails" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="deleteCustomer_personalDetails" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="deleteCustomer_previousCustomer" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_nextCustomer" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="deleteCustomer_errorMessage" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_deleteCustomer" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="deleteCustomer_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteCustomer_heading" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="deleteCustomer_nextCustomer" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteCustomer_previousCustomer" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteCustomer_personalDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="deleteCustomer_accountDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="deleteCustomer_deleteCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteCustomer_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="16" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="deleteCustomer_heading">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Delete Customer Details"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="deleteCustomer_previousCustomer">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="deleteCustomer_nextCustomer">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="deleteCustomer_personalDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Personal Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="deleteCustomer_nameText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_birthDateText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_addressText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_mobileText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_emailText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="deleteCustomer_emial" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_mobile" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_address" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_birthDate" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_name" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_birthDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_birthDateText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_addressText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_mobileText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_emial" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_emailText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_nameText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_name">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Name"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_birthDateText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Birth Date:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_birthDate">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Birth Date"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_addressText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Address:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_address">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Address"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_mobileText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Mobile:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_mobile">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s  Mobile"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_emailText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="E-Mail:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_emial">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s E-Mail"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="deleteCustomer_accountDetails">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Account Details">
+                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </TitledBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="deleteCustomer_accountTypetext" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_accountNumberText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_sortCodeText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_balanceText" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_cardText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="deleteCustomer_accountType" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_accountNumber" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_sortCode" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_balance" max="32767" attributes="0"/>
+                                      <Component id="deleteCustomer_card" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="156" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_accountType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_accountTypetext" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_accountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_accountNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_sortCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_sortCodeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_balance" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_balanceText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="deleteCustomer_card" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomer_cardText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountTypetext">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Account Type:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountType">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Account Type"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountNumberText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Account Number:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountNumber">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Account Number"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_sortCodeText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Sort Code:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_sortCode">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Sort Code"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_balanceText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Balance:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_balance">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Balance"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_cardText">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Card:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="deleteCustomer_card">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Customer&apos;s Card Type"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="deleteCustomer_errorMessage">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Error Message Displayed Here!"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="deleteCustomer_deleteCustomer">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Delete Customer"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
