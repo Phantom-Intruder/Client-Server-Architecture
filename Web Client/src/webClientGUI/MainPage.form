@@ -125,7 +125,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       <Component id="welcomeLabel" min="-2" pref="27" max="-2" attributes="0"/>
-                      <EmptySpace pref="419" max="32767" attributes="0"/>
+                      <EmptySpace pref="421" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -208,7 +208,7 @@
                                   <Component id="createEmployee_clear" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="createEmployee_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="135" max="32767" attributes="0"/>
+                              <EmptySpace pref="137" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -415,7 +415,7 @@
                                   <Component id="editEmployee_saveChanges" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="editEmployee_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="118" max="32767" attributes="0"/>
+                              <EmptySpace pref="120" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -434,11 +434,17 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editEmployee_previousEmployeeActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="editEmployee_nextEmployee">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editEmployee_nextEmployeeActionPerformed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JPanel" name="editEmployee_editEmployeeDetails">
                       <Properties>
@@ -615,7 +621,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               <Component id="deleteEmployee_heading" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <EmptySpace pref="31" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="deleteEmployee_nextEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="deleteEmployee_previousEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -754,6 +760,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Delete Employee"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteEmployee_deleteEmployeeActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -789,7 +798,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="customerListScrollPane" min="-2" pref="477" max="-2" attributes="0"/>
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Component id="refresh" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1170,11 +1179,17 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Clear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCustomer_clearActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="createCustomer_addCustomer">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Add Customer"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCustomer_addCustomerActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1252,11 +1267,17 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustomer_previousCustomerActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="editCustomer_nextCustomer">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustomer_nextCustomerActionPerformed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JPanel" name="editCustomer_personalDetails">
                       <Properties>
@@ -1849,6 +1870,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Delete Customer"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCustomer_deleteCustomerActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

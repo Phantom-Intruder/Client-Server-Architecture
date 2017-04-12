@@ -3,8 +3,6 @@ package webClientGUI;
 
 import java.awt.CardLayout;
 
-import java.sql.*;
-import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,23 +15,8 @@ public class MainPage extends javax.swing.JFrame {
     /**
      * Creates new form MainPage
      */
-    public MainPage() throws SQLException {
+    public MainPage(){
         initComponents();     
-         String url="jdbc:mysql://localhost:3306/mysql";
-        Properties prop=new Properties();
-        prop.setProperty("user","root");
-        prop.setProperty("password","");
-        Driver d=new com.mysql.jdbc.Driver();
-        Connection con = d.connect(url,prop);
-        if(con==null)   {
-            System.out.println("connection failed");
-            return;
-        }
-        DatabaseMetaData dm =con.getMetaData();
-        String dbversion=dm.getDatabaseProductVersion();
-        String dbname=dm.getDatabaseProductName();
-        System.out.println("name:"+dbname);
-        System.out.println("version:"+dbversion);
     }
 
     /**
@@ -125,7 +108,7 @@ public class MainPage extends javax.swing.JFrame {
         createCustomer_balanceText = new javax.swing.JLabel();
         createCustomer_balance = new javax.swing.JTextField();
         createCustomer_cardText = new javax.swing.JLabel();
-        createCustomer_card = new javax.swing.JComboBox<>();
+        createCustomer_card = new javax.swing.JComboBox<String>();
         createCustomer_errorMessage = new javax.swing.JLabel();
         createCustomer_clear = new javax.swing.JButton();
         createCustomer_addCustomer = new javax.swing.JButton();
@@ -154,7 +137,7 @@ public class MainPage extends javax.swing.JFrame {
         editCustomer_balanceText = new javax.swing.JLabel();
         editCustomer_balance = new javax.swing.JTextField();
         editCustomer_cardText = new javax.swing.JLabel();
-        editCustomer_card = new javax.swing.JComboBox<>();
+        editCustomer_card = new javax.swing.JComboBox<String>();
         editCustomer_errorMessage = new javax.swing.JLabel();
         editCustomer_saveChanges = new javax.swing.JButton();
         deleteCustomer = new javax.swing.JPanel();
@@ -216,7 +199,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(defaultPanelLayout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(welcomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(419, Short.MAX_VALUE))
+                .addContainerGap(421, Short.MAX_VALUE))
         );
 
         mainPagePanel.add(defaultPanel, "defaultPanel");
@@ -339,7 +322,7 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(createEmployee_addEmployee)
                     .addComponent(createEmployee_clear)
                     .addComponent(createEmployee_errorMessage))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         employeeTabs.addTab("Create Employee", createEmployee);
@@ -349,8 +332,18 @@ public class MainPage extends javax.swing.JFrame {
         editEmployee_heading.setText("Edit Employee");
 
         editEmployee_previousEmployee.setText("<<<");
+        editEmployee_previousEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editEmployee_previousEmployeeActionPerformed(evt);
+            }
+        });
 
         editEmployee_nextEmployee.setText(">>>");
+        editEmployee_nextEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editEmployee_nextEmployeeActionPerformed(evt);
+            }
+        });
 
         editEmployee_editEmployeeDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Edit Employee Details"));
 
@@ -470,7 +463,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(editEmployee_saveChanges)
                     .addComponent(editEmployee_errorMessage))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         employeeTabs.addTab("Edit Employee", editEmployee);
@@ -535,6 +528,11 @@ public class MainPage extends javax.swing.JFrame {
         deleteEmployee_errorMessage.setText("Error Message Displayed Here!");
 
         deleteEmployee_deleteEmployee.setText("Delete Employee");
+        deleteEmployee_deleteEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteEmployee_deleteEmployeeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout deleteEmployeeLayout = new javax.swing.GroupLayout(deleteEmployee);
         deleteEmployee.setLayout(deleteEmployeeLayout);
@@ -563,7 +561,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(deleteEmployeeLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(deleteEmployee_heading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteEmployee_nextEmployee)
                     .addComponent(deleteEmployee_previousEmployee))
@@ -638,7 +636,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(customerListPagePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(customerListScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(refresh)
                 .addContainerGap())
         );
@@ -719,7 +717,7 @@ public class MainPage extends javax.swing.JFrame {
 
         createCustomer_cardText.setText("Card:");
 
-        createCustomer_card.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Credit", "Debit" }));
+        createCustomer_card.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Credit", "Debit" }));
         createCustomer_card.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createCustomer_cardActionPerformed(evt);
@@ -777,8 +775,18 @@ public class MainPage extends javax.swing.JFrame {
         createCustomer_errorMessage.setText("Error Message Displayed Here!");
 
         createCustomer_clear.setText("Clear");
+        createCustomer_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createCustomer_clearActionPerformed(evt);
+            }
+        });
 
         createCustomer_addCustomer.setText("Add Customer");
+        createCustomer_addCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createCustomer_addCustomerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout createCustomerLayout = new javax.swing.GroupLayout(createCustomer);
         createCustomer.setLayout(createCustomerLayout);
@@ -824,8 +832,18 @@ public class MainPage extends javax.swing.JFrame {
         editCustomer_heading.setText("Edit Customer Details");
 
         editCustomer_previousCustomer.setText("<<<");
+        editCustomer_previousCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editCustomer_previousCustomerActionPerformed(evt);
+            }
+        });
 
         editCustomer_nextCustomer.setText(">>>");
+        editCustomer_nextCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editCustomer_nextCustomerActionPerformed(evt);
+            }
+        });
 
         editCustomer_personalDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Personal Details"));
 
@@ -898,7 +916,7 @@ public class MainPage extends javax.swing.JFrame {
 
         editCustomer_cardText.setText("Card:");
 
-        editCustomer_card.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Credit", "Debit" }));
+        editCustomer_card.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Credit", "Debit" }));
 
         javax.swing.GroupLayout editCustomer_accountDetailsLayout = new javax.swing.GroupLayout(editCustomer_accountDetails);
         editCustomer_accountDetails.setLayout(editCustomer_accountDetailsLayout);
@@ -1151,6 +1169,11 @@ public class MainPage extends javax.swing.JFrame {
         deleteCustomer_errorMessage.setText("Error Message Displayed Here!");
 
         deleteCustomer_deleteCustomer.setText("Delete Customer");
+        deleteCustomer_deleteCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCustomer_deleteCustomerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout deleteCustomerLayout = new javax.swing.GroupLayout(deleteCustomer);
         deleteCustomer.setLayout(deleteCustomerLayout);
@@ -1340,12 +1363,13 @@ public class MainPage extends javax.swing.JFrame {
         if(name.equals("") || position.equals("") || username.equals("") || password.equals("") || retypePassword.equals("")){
             createEmployee_errorMessage.setText("Please Fill All The Above Fields!");
         }else if(password.equals(retypePassword)){
+            createEmployee(name, position, username, password, retypePassword);
             createEmployee_errorMessage.setText("Employee Created!");
         }else{
             createEmployee_errorMessage.setText("The Two Passwords Do Not Match!");
         }
     }//GEN-LAST:event_createEmployee_addEmployeeActionPerformed
-
+ 
     private void editEmployee_saveChangesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployee_saveChangesActionPerformed
         String name = editEmployee_name.getText();
         String position = editEmployee_position.getText();
@@ -1355,11 +1379,44 @@ public class MainPage extends javax.swing.JFrame {
         if(name.equals("") || position.equals("") || username.equals("") || password.equals("") || retypePassword.equals("")){
             editEmployee_errorMessage.setText("Please Fill All The Above Fields!");
         }else if(password.equals(retypePassword)){
+            editEmployee(name, position, username, password, retypePassword);
             editEmployee_errorMessage.setText("Changes Saved!");
         }else{
             editEmployee_errorMessage.setText("The Two Passwords Do Not Match!");
         }
     }//GEN-LAST:event_editEmployee_saveChangesActionPerformed
+
+    private void deleteEmployee_deleteEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteEmployee_deleteEmployeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteEmployee_deleteEmployeeActionPerformed
+
+    private void editEmployee_nextEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployee_nextEmployeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editEmployee_nextEmployeeActionPerformed
+
+    private void editEmployee_previousEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployee_previousEmployeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editEmployee_previousEmployeeActionPerformed
+
+    private void createCustomer_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCustomer_clearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createCustomer_clearActionPerformed
+
+    private void createCustomer_addCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCustomer_addCustomerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createCustomer_addCustomerActionPerformed
+
+    private void editCustomer_previousCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustomer_previousCustomerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editCustomer_previousCustomerActionPerformed
+
+    private void editCustomer_nextCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustomer_nextCustomerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editCustomer_nextCustomerActionPerformed
+
+    private void deleteCustomer_deleteCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomer_deleteCustomerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteCustomer_deleteCustomerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1391,11 +1448,9 @@ public class MainPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
+               
                     new MainPage().setVisible(true);
-                } catch (SQLException ex) {
-                    Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                
             }
         });
     }
@@ -1550,4 +1605,50 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton refresh;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
+
+  
+
+    private static boolean createCustomer(java.lang.String name, java.lang.String birthDate, java.lang.String address, int mobile, java.lang.String email, java.lang.String accountType, int accountNumber, java.lang.String sortCode, double balance, java.lang.String card) {
+        bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
+        bank_web_services.CustomerWebService port = service.getCustomerWebServicePort();
+        return port.createCustomer(name, birthDate, address, mobile, email, accountType, accountNumber, sortCode, balance, card);
+    }
+
+    private static boolean deleteCustomer(java.lang.String name, java.lang.String birthDate, java.lang.String address, int mobile, java.lang.String email, java.lang.String accountType, int accountNumber, java.lang.String sortCode, double balance, java.lang.String card) {
+        bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
+        bank_web_services.CustomerWebService port = service.getCustomerWebServicePort();
+        return port.deleteCustomer(name, birthDate, address, mobile, email, accountType, accountNumber, sortCode, balance, card);
+    }
+
+    private static boolean editCustomer(java.lang.String name, java.lang.String birthDate, java.lang.String address, int mobile, java.lang.String email, java.lang.String accountType, int accountNumber, java.lang.String sortCode, double balance, java.lang.String card) {
+        bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
+        bank_web_services.CustomerWebService port = service.getCustomerWebServicePort();
+        return port.editCustomer(name, birthDate, address, mobile, email, accountType, accountNumber, sortCode, balance, card);
+    }
+
+    private static java.util.List<java.lang.String> getCustomerList() {
+        bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
+        bank_web_services.CustomerWebService port = service.getCustomerWebServicePort();
+        return port.getCustomerList();
+    }
+
+    private static boolean deleteEmployee(java.lang.String name, java.lang.String position, java.lang.String username) {
+        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
+        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
+        return port.deleteEmployee(name, position, username);
+    }
+
+    private static boolean editEmployee(java.lang.String name, java.lang.String position, java.lang.String username, java.lang.String password, java.lang.String retypePassword) {
+        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
+        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
+        return port.editEmployee(name, position, username, password, retypePassword);
+    }
+
+    private static boolean createEmployee(java.lang.String name, java.lang.String position, java.lang.String username, java.lang.String password, java.lang.String retypePassword) {
+        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
+        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
+        return port.createEmployee(name, position, username, password, retypePassword);
+    }
+
+   
 }
