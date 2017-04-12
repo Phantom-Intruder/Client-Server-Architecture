@@ -3,6 +3,11 @@ package webClientGUI;
 
 import java.awt.CardLayout;
 
+import java.sql.*;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Moiz Mansoor Ali
@@ -12,8 +17,23 @@ public class MainPage extends javax.swing.JFrame {
     /**
      * Creates new form MainPage
      */
-    public MainPage() {
-        initComponents();
+    public MainPage() throws SQLException {
+        initComponents();     
+         String url="jdbc:mysql://localhost:3306/mysql";
+        Properties prop=new Properties();
+        prop.setProperty("user","root");
+        prop.setProperty("password","");
+        Driver d=new com.mysql.jdbc.Driver();
+        Connection con = d.connect(url,prop);
+        if(con==null)   {
+            System.out.println("connection failed");
+            return;
+        }
+        DatabaseMetaData dm =con.getMetaData();
+        String dbversion=dm.getDatabaseProductVersion();
+        String dbname=dm.getDatabaseProductName();
+        System.out.println("name:"+dbname);
+        System.out.println("version:"+dbversion);
     }
 
     /**
@@ -1371,7 +1391,11 @@ public class MainPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainPage().setVisible(true);
+                try {
+                    new MainPage().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
