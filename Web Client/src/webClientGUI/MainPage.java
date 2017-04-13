@@ -110,8 +110,6 @@ public class MainPage extends javax.swing.JFrame {
         createCustomer_addCustomer = new javax.swing.JButton();
         editCustomer = new javax.swing.JPanel();
         editCustomer_heading = new javax.swing.JLabel();
-        editCustomer_previousCustomer = new javax.swing.JButton();
-        editCustomer_nextCustomer = new javax.swing.JButton();
         editCustomer_personalDetails = new javax.swing.JPanel();
         editCustomer_nameText = new javax.swing.JLabel();
         editCustomer_name = new javax.swing.JTextField();
@@ -136,32 +134,15 @@ public class MainPage extends javax.swing.JFrame {
         editCustomer_card = new javax.swing.JComboBox<String>();
         editCustomer_errorMessage = new javax.swing.JLabel();
         editCustomer_saveChanges = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        customerAccNoEdit = new javax.swing.JTextField();
+        customerEditButton = new javax.swing.JButton();
         deleteCustomer = new javax.swing.JPanel();
         deleteCustomer_heading = new javax.swing.JLabel();
-        deleteCustomer_previousCustomer = new javax.swing.JButton();
-        deleteCustomer_nextCustomer = new javax.swing.JButton();
-        deleteCustomer_personalDetails = new javax.swing.JPanel();
-        deleteCustomer_nameText = new javax.swing.JLabel();
-        deleteCustomer_name = new javax.swing.JLabel();
-        deleteCustomer_birthDateText = new javax.swing.JLabel();
-        deleteCustomer_birthDate = new javax.swing.JLabel();
-        deleteCustomer_addressText = new javax.swing.JLabel();
-        deleteCustomer_address = new javax.swing.JLabel();
-        deleteCustomer_mobileText = new javax.swing.JLabel();
-        deleteCustomer_mobile = new javax.swing.JLabel();
-        deleteCustomer_emailText = new javax.swing.JLabel();
-        deleteCustomer_emial = new javax.swing.JLabel();
         deleteCustomer_accountDetails = new javax.swing.JPanel();
-        deleteCustomer_accountTypetext = new javax.swing.JLabel();
-        deleteCustomer_accountType = new javax.swing.JLabel();
         deleteCustomer_accountNumberText = new javax.swing.JLabel();
-        deleteCustomer_accountNumber = new javax.swing.JLabel();
-        deleteCustomer_sortCodeText = new javax.swing.JLabel();
-        deleteCustomer_sortCode = new javax.swing.JLabel();
-        deleteCustomer_balanceText = new javax.swing.JLabel();
-        deleteCustomer_balance = new javax.swing.JLabel();
-        deleteCustomer_cardText = new javax.swing.JLabel();
-        deleteCustomer_card = new javax.swing.JLabel();
+        deleteCustomerEdit = new javax.swing.JTextField();
+        deleteCustomerButton = new javax.swing.JButton();
         deleteCustomer_errorMessage = new javax.swing.JLabel();
         deleteCustomer_deleteCustomer = new javax.swing.JButton();
         mainMenuBar = new javax.swing.JMenuBar();
@@ -810,20 +791,6 @@ public class MainPage extends javax.swing.JFrame {
         editCustomer_heading.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         editCustomer_heading.setText("Edit Customer Details");
 
-        editCustomer_previousCustomer.setText("<<<");
-        editCustomer_previousCustomer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editCustomer_previousCustomerActionPerformed(evt);
-            }
-        });
-
-        editCustomer_nextCustomer.setText(">>>");
-        editCustomer_nextCustomer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editCustomer_nextCustomerActionPerformed(evt);
-            }
-        });
-
         editCustomer_personalDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Personal Details"));
 
         editCustomer_nameText.setText("Name:");
@@ -954,47 +921,67 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Enter customer account number");
+
+        customerAccNoEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerAccNoEditActionPerformed(evt);
+            }
+        });
+
+        customerEditButton.setText("Edit");
+        customerEditButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerEditButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout editCustomerLayout = new javax.swing.GroupLayout(editCustomer);
         editCustomer.setLayout(editCustomerLayout);
         editCustomerLayout.setHorizontalGroup(
             editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editCustomerLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(editCustomer_personalDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(editCustomer_accountDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(editCustomerLayout.createSequentialGroup()
-                        .addComponent(editCustomer_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(editCustomer_saveChanges))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editCustomerLayout.createSequentialGroup()
-                        .addComponent(editCustomer_previousCustomer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(editCustomer_nextCustomer)))
+                        .addContainerGap()
+                        .addGroup(editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(editCustomer_personalDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(editCustomer_accountDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(editCustomerLayout.createSequentialGroup()
+                                .addComponent(editCustomer_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editCustomer_saveChanges))))
+                    .addGroup(editCustomerLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(editCustomer_heading)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(editCustomerLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(customerAccNoEdit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(customerEditButton)))
                 .addContainerGap())
-            .addGroup(editCustomerLayout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(editCustomer_heading)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         editCustomerLayout.setVerticalGroup(
             editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editCustomerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(editCustomer_heading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editCustomer_nextCustomer)
-                    .addComponent(editCustomer_previousCustomer))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jLabel3)
+                    .addComponent(customerAccNoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerEditButton))
+                .addGap(18, 18, 18)
                 .addComponent(editCustomer_personalDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(editCustomer_accountDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(8, 8, 8)
                 .addGroup(editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editCustomer_errorMessage)
-                    .addComponent(editCustomer_saveChanges))
-                .addContainerGap())
+                    .addComponent(editCustomer_saveChanges)
+                    .addComponent(editCustomer_errorMessage)))
         );
 
         customerTabs.addTab("Edit Customer", editCustomer);
@@ -1002,146 +989,39 @@ public class MainPage extends javax.swing.JFrame {
         deleteCustomer_heading.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         deleteCustomer_heading.setText("Delete Customer Details");
 
-        deleteCustomer_previousCustomer.setText("<<<");
-
-        deleteCustomer_nextCustomer.setText(">>>");
-
-        deleteCustomer_personalDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Personal Details"));
-
-        deleteCustomer_nameText.setText("Name:");
-
-        deleteCustomer_name.setText("Customer's Name");
-
-        deleteCustomer_birthDateText.setText("Birth Date:");
-
-        deleteCustomer_birthDate.setText("Customer's Birth Date");
-
-        deleteCustomer_addressText.setText("Address:");
-
-        deleteCustomer_address.setText("Customer's Address");
-
-        deleteCustomer_mobileText.setText("Mobile:");
-
-        deleteCustomer_mobile.setText("Customer's  Mobile");
-
-        deleteCustomer_emailText.setText("E-Mail:");
-
-        deleteCustomer_emial.setText("Customer's E-Mail");
-
-        javax.swing.GroupLayout deleteCustomer_personalDetailsLayout = new javax.swing.GroupLayout(deleteCustomer_personalDetails);
-        deleteCustomer_personalDetails.setLayout(deleteCustomer_personalDetailsLayout);
-        deleteCustomer_personalDetailsLayout.setHorizontalGroup(
-            deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(deleteCustomer_personalDetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(deleteCustomer_nameText)
-                    .addComponent(deleteCustomer_birthDateText)
-                    .addComponent(deleteCustomer_addressText)
-                    .addComponent(deleteCustomer_mobileText)
-                    .addComponent(deleteCustomer_emailText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(deleteCustomer_emial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_mobile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_address, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_birthDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_name, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        deleteCustomer_personalDetailsLayout.setVerticalGroup(
-            deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(deleteCustomer_personalDetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_nameText)
-                    .addComponent(deleteCustomer_name))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_birthDate)
-                    .addComponent(deleteCustomer_birthDateText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_address)
-                    .addComponent(deleteCustomer_addressText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_mobile)
-                    .addComponent(deleteCustomer_mobileText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_personalDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_emial)
-                    .addComponent(deleteCustomer_emailText))
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-
         deleteCustomer_accountDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Account Details"));
 
-        deleteCustomer_accountTypetext.setText("Account Type:");
+        deleteCustomer_accountNumberText.setText("Enter customer account number");
 
-        deleteCustomer_accountType.setText("Customer's Account Type");
-
-        deleteCustomer_accountNumberText.setText("Account Number:");
-
-        deleteCustomer_accountNumber.setText("Customer's Account Number");
-
-        deleteCustomer_sortCodeText.setText("Sort Code:");
-
-        deleteCustomer_sortCode.setText("Customer's Sort Code");
-
-        deleteCustomer_balanceText.setText("Balance:");
-
-        deleteCustomer_balance.setText("Customer's Balance");
-
-        deleteCustomer_cardText.setText("Card:");
-
-        deleteCustomer_card.setText("Customer's Card Type");
+        deleteCustomerButton.setText("delete");
+        deleteCustomerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCustomerButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout deleteCustomer_accountDetailsLayout = new javax.swing.GroupLayout(deleteCustomer_accountDetails);
         deleteCustomer_accountDetails.setLayout(deleteCustomer_accountDetailsLayout);
         deleteCustomer_accountDetailsLayout.setHorizontalGroup(
             deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteCustomer_accountDetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(deleteCustomer_accountTypetext)
-                    .addComponent(deleteCustomer_accountNumberText)
-                    .addComponent(deleteCustomer_sortCodeText)
-                    .addComponent(deleteCustomer_balanceText)
-                    .addComponent(deleteCustomer_cardText))
+                .addGap(6, 6, 6)
+                .addComponent(deleteCustomer_accountNumberText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(deleteCustomer_accountType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_accountNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_sortCode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_balance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_card, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addComponent(deleteCustomerEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(deleteCustomerButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         deleteCustomer_accountDetailsLayout.setVerticalGroup(
             deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteCustomer_accountDetailsLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(64, 64, 64)
                 .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_accountType)
-                    .addComponent(deleteCustomer_accountTypetext))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_accountNumber)
-                    .addComponent(deleteCustomer_accountNumberText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_sortCode)
-                    .addComponent(deleteCustomer_sortCodeText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_balance)
-                    .addComponent(deleteCustomer_balanceText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomer_accountDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteCustomer_card)
-                    .addComponent(deleteCustomer_cardText))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(deleteCustomer_accountNumberText)
+                    .addComponent(deleteCustomerEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteCustomerButton))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         deleteCustomer_errorMessage.setForeground(new java.awt.Color(255, 0, 0));
@@ -1162,11 +1042,6 @@ public class MainPage extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(deleteCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(deleteCustomer_accountDetails, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteCustomer_personalDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(deleteCustomerLayout.createSequentialGroup()
-                        .addComponent(deleteCustomer_previousCustomer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(deleteCustomer_nextCustomer))
                     .addGroup(deleteCustomerLayout.createSequentialGroup()
                         .addComponent(deleteCustomer_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1182,19 +1057,13 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(deleteCustomerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(deleteCustomer_heading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(deleteCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(deleteCustomer_nextCustomer, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(deleteCustomer_previousCustomer, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(deleteCustomer_personalDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(124, 124, 124)
                 .addComponent(deleteCustomer_accountDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(253, 253, 253)
                 .addGroup(deleteCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteCustomer_deleteCustomer)
                     .addComponent(deleteCustomer_errorMessage))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         customerTabs.addTab("Delete Customer", deleteCustomer);
@@ -1366,20 +1235,39 @@ public class MainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_editEmployee_saveChangesActionPerformed
 
     private void createCustomer_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCustomer_clearActionPerformed
-        // TODO add your handling code here:
+        createCustomer_name.setText("");
+        createCustomer_birthDate.setText("");
+        createCustomer_address.setText("");
+        createCustomer_mobile.setText("");
+        createCustomer_email.setText("");
+        createCustomer_accountType.setText("");
+        createCustomer_accountNumber.setText("");
+        createCustomer_sortCode.setText("");
+        createCustomer_balance.setText("");
+       
     }//GEN-LAST:event_createCustomer_clearActionPerformed
 
     private void createCustomer_addCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCustomer_addCustomerActionPerformed
-        // TODO add your handling code here:
+        int mobile = 0;
+        int accountNumber = 0;
+        double balance = 0.0;
+        String name = createCustomer_name.getText();
+        String birthDate = createCustomer_birthDate.getText();
+        String address = createCustomer_address.getText();
+        mobile = Integer.parseInt(createCustomer_mobile.getText());
+        String email = createCustomer_email.getText();
+        String accountType = createCustomer_accountType.getText();
+        accountNumber = Integer.parseInt(createCustomer_accountNumber.getText());
+        String sortCode = createCustomer_sortCode.getText();
+        balance = Double.parseDouble(createCustomer_balance.getText());
+        String card = (String) createCustomer_card.getSelectedItem();
+        if(name.equals("") || birthDate.equals("") || address.equals("") || mobile == 0 || email.equals("") || accountType.equals("") || accountNumber == 0 || sortCode.equals("") || balance == 0.0){
+            editEmployee_errorMessage.setText("Please Fill All The Above Fields!");
+        }else{
+            createCustomer(name, birthDate, address, mobile, email, accountType,accountNumber,sortCode,balance, card);
+            createCustomer_errorMessage.setText("Changes Saved!");
+        }          
     }//GEN-LAST:event_createCustomer_addCustomerActionPerformed
-
-    private void editCustomer_previousCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustomer_previousCustomerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editCustomer_previousCustomerActionPerformed
-
-    private void editCustomer_nextCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustomer_nextCustomerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editCustomer_nextCustomerActionPerformed
 
     private void deleteCustomer_deleteCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomer_deleteCustomerActionPerformed
         // TODO add your handling code here:
@@ -1407,6 +1295,19 @@ public class MainPage extends javax.swing.JFrame {
         String successMessage = deleteEmployee(deleteEmplyeeTextfield.getText());
         System.out.println(successMessage);
     }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void customerEditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerEditButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerEditButtonActionPerformed
+
+    private void customerAccNoEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerAccNoEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerAccNoEditActionPerformed
+
+    private void deleteCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomerButtonActionPerformed
+      String successMessage = deleteData(deleteCustomerEdit.getText());
+      System.out.println(successMessage);
+    }//GEN-LAST:event_deleteCustomerButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1489,8 +1390,10 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel createEmployee_retypePasswordText;
     private javax.swing.JTextField createEmployee_username;
     private javax.swing.JLabel createEmployee_usernameText;
+    private javax.swing.JTextField customerAccNoEdit;
     private javax.swing.JMenuItem customerAccountPage;
     private javax.swing.JPanel customerAccountPagePanel;
+    private javax.swing.JButton customerEditButton;
     private javax.swing.JMenuItem customerListPage;
     private javax.swing.JPanel customerListPagePanel;
     private javax.swing.JScrollPane customerListScrollPane;
@@ -1499,33 +1402,13 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel defaultPanel;
     private javax.swing.JButton deleteButton;
     private javax.swing.JPanel deleteCustomer;
+    private javax.swing.JButton deleteCustomerButton;
+    private javax.swing.JTextField deleteCustomerEdit;
     private javax.swing.JPanel deleteCustomer_accountDetails;
-    private javax.swing.JLabel deleteCustomer_accountNumber;
     private javax.swing.JLabel deleteCustomer_accountNumberText;
-    private javax.swing.JLabel deleteCustomer_accountType;
-    private javax.swing.JLabel deleteCustomer_accountTypetext;
-    private javax.swing.JLabel deleteCustomer_address;
-    private javax.swing.JLabel deleteCustomer_addressText;
-    private javax.swing.JLabel deleteCustomer_balance;
-    private javax.swing.JLabel deleteCustomer_balanceText;
-    private javax.swing.JLabel deleteCustomer_birthDate;
-    private javax.swing.JLabel deleteCustomer_birthDateText;
-    private javax.swing.JLabel deleteCustomer_card;
-    private javax.swing.JLabel deleteCustomer_cardText;
     private javax.swing.JButton deleteCustomer_deleteCustomer;
-    private javax.swing.JLabel deleteCustomer_emailText;
-    private javax.swing.JLabel deleteCustomer_emial;
     private javax.swing.JLabel deleteCustomer_errorMessage;
     private javax.swing.JLabel deleteCustomer_heading;
-    private javax.swing.JLabel deleteCustomer_mobile;
-    private javax.swing.JLabel deleteCustomer_mobileText;
-    private javax.swing.JLabel deleteCustomer_name;
-    private javax.swing.JLabel deleteCustomer_nameText;
-    private javax.swing.JButton deleteCustomer_nextCustomer;
-    private javax.swing.JPanel deleteCustomer_personalDetails;
-    private javax.swing.JButton deleteCustomer_previousCustomer;
-    private javax.swing.JLabel deleteCustomer_sortCode;
-    private javax.swing.JLabel deleteCustomer_sortCodeText;
     private javax.swing.JPanel deleteEmployee;
     private javax.swing.JPanel deleteEmployee_deleteEmployeeDetails;
     private javax.swing.JLabel deleteEmployee_errorMessage;
@@ -1554,9 +1437,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel editCustomer_mobileText;
     private javax.swing.JTextField editCustomer_name;
     private javax.swing.JLabel editCustomer_nameText;
-    private javax.swing.JButton editCustomer_nextCustomer;
     private javax.swing.JPanel editCustomer_personalDetails;
-    private javax.swing.JButton editCustomer_previousCustomer;
     private javax.swing.JButton editCustomer_saveChanges;
     private javax.swing.JTextField editCustomer_sortCode;
     private javax.swing.JLabel editCustomer_sortCodeText;
@@ -1582,6 +1463,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JMenu file;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem logOut;
     private javax.swing.JMenuItem logOutAndExit;
@@ -1600,11 +1482,7 @@ public class MainPage extends javax.swing.JFrame {
         return port.createCustomer(name, birthDate, address, mobile, email, accountType, accountNumber, sortCode, balance, card);
     }
 
-    private static boolean deleteCustomer(java.lang.String name, java.lang.String birthDate, java.lang.String address, int mobile, java.lang.String email, java.lang.String accountType, int accountNumber, java.lang.String sortCode, double balance, java.lang.String card) {
-        bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
-        bank_web_services.CustomerWebService port = service.getCustomerWebServicePort();
-        return port.deleteCustomer(name, birthDate, address, mobile, email, accountType, accountNumber, sortCode, balance, card);
-    }
+    
 
     private static boolean editCustomer(java.lang.String name, java.lang.String birthDate, java.lang.String address, int mobile, java.lang.String email, java.lang.String accountType, int accountNumber, java.lang.String sortCode, double balance, java.lang.String card) {
         bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
@@ -1640,9 +1518,13 @@ public class MainPage extends javax.swing.JFrame {
         bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
         bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
         return port.deleteEmployee(username);
+    }  
+
+    private static String deleteData(java.lang.String accountNo) {
+        bank_web_services.CustomerWebService_Service service = new bank_web_services.CustomerWebService_Service();
+        bank_web_services.CustomerWebService port = service.getCustomerWebServicePort();
+        return port.deleteData(accountNo);
     }
 
-   
 
-   
 }

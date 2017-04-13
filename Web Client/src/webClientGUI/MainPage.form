@@ -1171,27 +1171,34 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="editCustomer_personalDetails" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="editCustomer_accountDetails" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="editCustomer_errorMessage" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="editCustomer_saveChanges" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="editCustomer_personalDetails" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="editCustomer_accountDetails" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="editCustomer_errorMessage" max="32767" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="editCustomer_saveChanges" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="editCustomer_previousCustomer" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="editCustomer_nextCustomer" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                      <Component id="editCustomer_heading" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="customerAccNoEdit" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="customerEditButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                              <Component id="editCustomer_heading" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1200,21 +1207,21 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="editCustomer_heading" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace pref="16" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="editCustomer_nextCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="editCustomer_previousCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="customerAccNoEdit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="customerEditButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="editCustomer_personalDetails" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="14" max="32767" attributes="0"/>
-                              <Component id="editCustomer_accountDetails" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="editCustomer_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="editCustomer_saveChanges" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="editCustomer_accountDetails" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="editCustomer_saveChanges" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="editCustomer_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1227,22 +1234,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Edit Customer Details"/>
                       </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="editCustomer_previousCustomer">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustomer_previousCustomerActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="editCustomer_nextCustomer">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustomer_nextCustomerActionPerformed"/>
-                      </Events>
                     </Component>
                     <Container class="javax.swing.JPanel" name="editCustomer_personalDetails">
                       <Properties>
@@ -1491,6 +1482,24 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustomer_saveChangesActionPerformed"/>
                       </Events>
                     </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Enter customer account number"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="customerAccNoEdit">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerAccNoEditActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="customerEditButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Edit"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerEditButtonActionPerformed"/>
+                      </Events>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="deleteCustomer">
@@ -1509,12 +1518,6 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="deleteCustomer_accountDetails" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="deleteCustomer_personalDetails" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="deleteCustomer_previousCustomer" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_nextCustomer" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="deleteCustomer_errorMessage" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1535,21 +1538,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="deleteCustomer_heading" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="deleteCustomer_nextCustomer" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="deleteCustomer_previousCustomer" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="deleteCustomer_personalDetails" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="deleteCustomer_accountDetails" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="deleteCustomer_deleteCustomer" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="deleteCustomer_errorMessage" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="16" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1563,141 +1559,6 @@
                         <Property name="text" type="java.lang.String" value="Delete Customer Details"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="deleteCustomer_previousCustomer">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="deleteCustomer_nextCustomer">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="&gt;&gt;&gt;"/>
-                      </Properties>
-                    </Component>
-                    <Container class="javax.swing.JPanel" name="deleteCustomer_personalDetails">
-                      <Properties>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder title="Personal Details">
-                              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </TitledBorder>
-                          </Border>
-                        </Property>
-                      </Properties>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="deleteCustomer_nameText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_birthDateText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_addressText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_mobileText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_emailText" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="deleteCustomer_emial" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_mobile" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_address" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_birthDate" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_name" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_nameText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_name" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_birthDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_birthDateText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_address" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_addressText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_mobileText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_emial" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_emailText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="29" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_nameText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Name:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_name">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Name"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_birthDateText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Birth Date:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_birthDate">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Birth Date"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_addressText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Address:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_address">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Address"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_mobileText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Mobile:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_mobile">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s  Mobile"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_emailText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="E-Mail:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_emial">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s E-Mail"/>
-                          </Properties>
-                        </Component>
-                      </SubComponents>
-                    </Container>
                     <Container class="javax.swing.JPanel" name="deleteCustomer_accountDetails">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1717,109 +1578,45 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="deleteCustomer_accountTypetext" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_accountNumberText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_sortCodeText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_balanceText" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_cardText" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Component id="deleteCustomer_accountNumberText" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="deleteCustomer_accountType" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_accountNumber" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_sortCode" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_balance" max="32767" attributes="0"/>
-                                      <Component id="deleteCustomer_card" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="156" max="32767" attributes="0"/>
+                                  <Component id="deleteCustomerEdit" min="-2" pref="154" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="deleteCustomerButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_accountType" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_accountTypetext" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_accountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="deleteCustomer_accountNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomerEdit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deleteCustomerButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_sortCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_sortCodeText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_balance" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_balanceText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="deleteCustomer_card" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="deleteCustomer_cardText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                                  <EmptySpace pref="75" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountTypetext">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Account Type:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountType">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Account Type"/>
-                          </Properties>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="deleteCustomer_accountNumberText">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Account Number:"/>
+                            <Property name="text" type="java.lang.String" value="Enter customer account number"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_accountNumber">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Account Number"/>
-                          </Properties>
+                        <Component class="javax.swing.JTextField" name="deleteCustomerEdit">
                         </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_sortCodeText">
+                        <Component class="javax.swing.JButton" name="deleteCustomerButton">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Sort Code:"/>
+                            <Property name="text" type="java.lang.String" value="delete"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_sortCode">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Sort Code"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_balanceText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Balance:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_balance">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Balance"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_cardText">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Card:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="deleteCustomer_card">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Customer&apos;s Card Type"/>
-                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCustomerButtonActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
