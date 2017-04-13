@@ -51,8 +51,6 @@ public class MainPage extends javax.swing.JFrame {
         createEmployee_addEmployee = new javax.swing.JButton();
         editEmployee = new javax.swing.JPanel();
         editEmployee_heading = new javax.swing.JLabel();
-        editEmployee_previousEmployee = new javax.swing.JButton();
-        editEmployee_nextEmployee = new javax.swing.JButton();
         editEmployee_editEmployeeDetails = new javax.swing.JPanel();
         editEmployee_nameText = new javax.swing.JLabel();
         editEmployee_name = new javax.swing.JTextField();
@@ -66,19 +64,17 @@ public class MainPage extends javax.swing.JFrame {
         editEmployee_retypePassword = new javax.swing.JPasswordField();
         editEmployee_errorMessage = new javax.swing.JLabel();
         editEmployee_saveChanges = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        editButton = new javax.swing.JButton();
+        editEmployeeTextfield = new javax.swing.JTextField();
         deleteEmployee = new javax.swing.JPanel();
         deleteEmployee_heading = new javax.swing.JLabel();
-        deleteEmployee_previousEmployee = new javax.swing.JButton();
-        deleteEmployee_nextEmployee = new javax.swing.JButton();
         deleteEmployee_deleteEmployeeDetails = new javax.swing.JPanel();
-        deleteEmployee_nameText = new javax.swing.JLabel();
-        deleteEmployee_name = new javax.swing.JLabel();
-        deleteEmployee_positionText = new javax.swing.JLabel();
-        deleteEmployee_position = new javax.swing.JLabel();
-        deleteEmployee_usernameText = new javax.swing.JLabel();
-        deleteEmployee_username = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        deleteButton = new javax.swing.JButton();
+        deleteEmplyeeTextfield = new javax.swing.JTextField();
         deleteEmployee_errorMessage = new javax.swing.JLabel();
-        deleteEmployee_deleteEmployee = new javax.swing.JButton();
         customerListPagePanel = new javax.swing.JPanel();
         customerListScrollPane = new javax.swing.JScrollPane();
         customerListTable = new javax.swing.JTable();
@@ -322,7 +318,7 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(createEmployee_addEmployee)
                     .addComponent(createEmployee_clear)
                     .addComponent(createEmployee_errorMessage))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         employeeTabs.addTab("Create Employee", createEmployee);
@@ -330,20 +326,6 @@ public class MainPage extends javax.swing.JFrame {
         editEmployee_heading.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         editEmployee_heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         editEmployee_heading.setText("Edit Employee");
-
-        editEmployee_previousEmployee.setText("<<<");
-        editEmployee_previousEmployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editEmployee_previousEmployeeActionPerformed(evt);
-            }
-        });
-
-        editEmployee_nextEmployee.setText(">>>");
-        editEmployee_nextEmployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editEmployee_nextEmployeeActionPerformed(evt);
-            }
-        });
 
         editEmployee_editEmployeeDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Edit Employee Details"));
 
@@ -426,44 +408,78 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Enter employee username to edit");
+
+        editButton.setText("Edit");
+        editButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editButtonActionPerformed(evt);
+            }
+        });
+
+        editEmployeeTextfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editEmployeeTextfieldActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(23, 23, 23)
+                .addComponent(editEmployeeTextfield)
+                .addGap(18, 18, 18)
+                .addComponent(editButton)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(editButton)
+                    .addComponent(editEmployeeTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout editEmployeeLayout = new javax.swing.GroupLayout(editEmployee);
         editEmployee.setLayout(editEmployeeLayout);
         editEmployeeLayout.setHorizontalGroup(
             editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editEmployeeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editEmployeeLayout.createSequentialGroup()
-                        .addComponent(editEmployee_previousEmployee)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(editEmployee_nextEmployee))
-                    .addComponent(editEmployee_editEmployeeDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editEmployeeLayout.createSequentialGroup()
-                        .addComponent(editEmployee_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(editEmployee_saveChanges)))
-                .addContainerGap())
-            .addGroup(editEmployeeLayout.createSequentialGroup()
                 .addGap(94, 94, 94)
                 .addComponent(editEmployee_heading, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 97, Short.MAX_VALUE))
+            .addGroup(editEmployeeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editEmployee_editEmployeeDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editEmployeeLayout.createSequentialGroup()
+                        .addComponent(editEmployee_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)
+                        .addComponent(editEmployee_saveChanges))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         editEmployeeLayout.setVerticalGroup(
             editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editEmployeeLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(editEmployee_heading)
-                .addGap(18, 18, 18)
-                .addGroup(editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(editEmployee_nextEmployee, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(editEmployee_previousEmployee, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(editEmployee_editEmployeeDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addGroup(editEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(editEmployee_saveChanges)
                     .addComponent(editEmployee_errorMessage))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGap(47, 47, 47))
         );
 
         employeeTabs.addTab("Edit Employee", editEmployee);
@@ -471,23 +487,16 @@ public class MainPage extends javax.swing.JFrame {
         deleteEmployee_heading.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         deleteEmployee_heading.setText("Delete Employee");
 
-        deleteEmployee_previousEmployee.setText("<<<");
-
-        deleteEmployee_nextEmployee.setText(">>>");
-
         deleteEmployee_deleteEmployeeDetails.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)), "Delete Employee Details"));
 
-        deleteEmployee_nameText.setText("Name:");
+        jLabel2.setText("Enter employee username to delete");
 
-        deleteEmployee_name.setText("Employee's Name");
-
-        deleteEmployee_positionText.setText("Position:");
-
-        deleteEmployee_position.setText("Employee's Position");
-
-        deleteEmployee_usernameText.setText("Username:");
-
-        deleteEmployee_username.setText("Employee's Username");
+        deleteButton.setText("Delete");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout deleteEmployee_deleteEmployeeDetailsLayout = new javax.swing.GroupLayout(deleteEmployee_deleteEmployeeDetails);
         deleteEmployee_deleteEmployeeDetails.setLayout(deleteEmployee_deleteEmployeeDetailsLayout);
@@ -495,83 +504,53 @@ public class MainPage extends javax.swing.JFrame {
             deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(deleteEmployee_nameText)
-                    .addComponent(deleteEmployee_positionText)
-                    .addComponent(deleteEmployee_usernameText))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(deleteEmployee_name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteEmployee_position, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteEmployee_username))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(deleteEmplyeeTextfield)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(deleteButton)
+                .addContainerGap())
         );
         deleteEmployee_deleteEmployeeDetailsLayout.setVerticalGroup(
             deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(52, 52, 52)
                 .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteEmployee_name)
-                    .addComponent(deleteEmployee_nameText))
-                .addGap(18, 18, 18)
-                .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteEmployee_position)
-                    .addComponent(deleteEmployee_positionText))
-                .addGap(18, 18, 18)
-                .addGroup(deleteEmployee_deleteEmployeeDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteEmployee_username)
-                    .addComponent(deleteEmployee_usernameText))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(deleteButton)
+                    .addComponent(deleteEmplyeeTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         deleteEmployee_errorMessage.setForeground(new java.awt.Color(255, 0, 0));
         deleteEmployee_errorMessage.setText("Error Message Displayed Here!");
-
-        deleteEmployee_deleteEmployee.setText("Delete Employee");
-        deleteEmployee_deleteEmployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteEmployee_deleteEmployeeActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout deleteEmployeeLayout = new javax.swing.GroupLayout(deleteEmployee);
         deleteEmployee.setLayout(deleteEmployeeLayout);
         deleteEmployeeLayout.setHorizontalGroup(
             deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteEmployeeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(deleteEmployee_deleteEmployeeDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deleteEmployeeLayout.createSequentialGroup()
-                        .addComponent(deleteEmployee_previousEmployee)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(deleteEmployee_nextEmployee))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deleteEmployeeLayout.createSequentialGroup()
-                        .addComponent(deleteEmployee_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(deleteEmployee_deleteEmployee)))
-                .addContainerGap())
-            .addGroup(deleteEmployeeLayout.createSequentialGroup()
                 .addGap(129, 129, 129)
                 .addComponent(deleteEmployee_heading)
                 .addContainerGap(132, Short.MAX_VALUE))
+            .addGroup(deleteEmployeeLayout.createSequentialGroup()
+                .addGroup(deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(deleteEmployee_errorMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deleteEmployeeLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(deleteEmployee_deleteEmployeeDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         deleteEmployeeLayout.setVerticalGroup(
             deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteEmployeeLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(deleteEmployee_heading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteEmployee_nextEmployee)
-                    .addComponent(deleteEmployee_previousEmployee))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addComponent(deleteEmployee_deleteEmployeeDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(deleteEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteEmployee_deleteEmployee)
-                    .addComponent(deleteEmployee_errorMessage))
-                .addGap(211, 211, 211))
+                .addGap(103, 103, 103)
+                .addComponent(deleteEmployee_errorMessage)
+                .addGap(78, 78, 78))
         );
 
         employeeTabs.addTab("Delete Employee", deleteEmployee);
@@ -1386,18 +1365,6 @@ public class MainPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_editEmployee_saveChangesActionPerformed
 
-    private void deleteEmployee_deleteEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteEmployee_deleteEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteEmployee_deleteEmployeeActionPerformed
-
-    private void editEmployee_nextEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployee_nextEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editEmployee_nextEmployeeActionPerformed
-
-    private void editEmployee_previousEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployee_previousEmployeeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editEmployee_previousEmployeeActionPerformed
-
     private void createCustomer_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCustomer_clearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_createCustomer_clearActionPerformed
@@ -1417,6 +1384,29 @@ public class MainPage extends javax.swing.JFrame {
     private void deleteCustomer_deleteCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomer_deleteCustomerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteCustomer_deleteCustomerActionPerformed
+
+    private void editEmployeeTextfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployeeTextfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editEmployeeTextfieldActionPerformed
+
+    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
+        String username = editEmployeeTextfield.getText();
+        if (username == null){}
+        else{
+            String returnedData = searchForEmployee(username);
+            String[] parts = returnedData.split(",");
+            editEmployee_name.setText(parts[0]);
+            editEmployee_position.setText(parts[1]);
+            editEmployee_username.setText(parts[2]);
+            editEmployee_password.setText(parts[3]);
+            editEmployee_retypePassword.setText(parts[3]);
+        }
+    }//GEN-LAST:event_editButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        String successMessage = deleteEmployee(deleteEmplyeeTextfield.getText());
+        System.out.println(successMessage);
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1507,6 +1497,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JTable customerListTable;
     private javax.swing.JTabbedPane customerTabs;
     private javax.swing.JPanel defaultPanel;
+    private javax.swing.JButton deleteButton;
     private javax.swing.JPanel deleteCustomer;
     private javax.swing.JPanel deleteCustomer_accountDetails;
     private javax.swing.JLabel deleteCustomer_accountNumber;
@@ -1536,18 +1527,11 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel deleteCustomer_sortCode;
     private javax.swing.JLabel deleteCustomer_sortCodeText;
     private javax.swing.JPanel deleteEmployee;
-    private javax.swing.JButton deleteEmployee_deleteEmployee;
     private javax.swing.JPanel deleteEmployee_deleteEmployeeDetails;
     private javax.swing.JLabel deleteEmployee_errorMessage;
     private javax.swing.JLabel deleteEmployee_heading;
-    private javax.swing.JLabel deleteEmployee_name;
-    private javax.swing.JLabel deleteEmployee_nameText;
-    private javax.swing.JButton deleteEmployee_nextEmployee;
-    private javax.swing.JLabel deleteEmployee_position;
-    private javax.swing.JLabel deleteEmployee_positionText;
-    private javax.swing.JButton deleteEmployee_previousEmployee;
-    private javax.swing.JLabel deleteEmployee_username;
-    private javax.swing.JLabel deleteEmployee_usernameText;
+    private javax.swing.JTextField deleteEmplyeeTextfield;
+    private javax.swing.JButton editButton;
     private javax.swing.JPanel editCustomer;
     private javax.swing.JPanel editCustomer_accountDetails;
     private javax.swing.JTextField editCustomer_accountNumber;
@@ -1577,16 +1561,15 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JTextField editCustomer_sortCode;
     private javax.swing.JLabel editCustomer_sortCodeText;
     private javax.swing.JPanel editEmployee;
+    private javax.swing.JTextField editEmployeeTextfield;
     private javax.swing.JPanel editEmployee_editEmployeeDetails;
     private javax.swing.JLabel editEmployee_errorMessage;
     private javax.swing.JLabel editEmployee_heading;
     private javax.swing.JTextField editEmployee_name;
     private javax.swing.JLabel editEmployee_nameText;
-    private javax.swing.JButton editEmployee_nextEmployee;
     private javax.swing.JPasswordField editEmployee_password;
     private javax.swing.JTextField editEmployee_position;
     private javax.swing.JLabel editEmployee_positionText;
-    private javax.swing.JButton editEmployee_previousEmployee;
     private javax.swing.JPasswordField editEmployee_retypePassword;
     private javax.swing.JLabel editEmployee_retypePasswordText;
     private javax.swing.JButton editEmployee_saveChanges;
@@ -1597,6 +1580,9 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel employeePagePanel;
     private javax.swing.JTabbedPane employeeTabs;
     private javax.swing.JMenu file;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem logOut;
     private javax.swing.JMenuItem logOutAndExit;
     private javax.swing.JMenuBar mainMenuBar;
@@ -1632,12 +1618,6 @@ public class MainPage extends javax.swing.JFrame {
         return port.getCustomerList();
     }
 
-    private static boolean deleteEmployee(java.lang.String name, java.lang.String position, java.lang.String username) {
-        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
-        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
-        return port.deleteEmployee(name, position, username);
-    }
-
     private static boolean editEmployee(java.lang.String name, java.lang.String position, java.lang.String username, java.lang.String password, java.lang.String retypePassword) {
         bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
         bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
@@ -1649,6 +1629,20 @@ public class MainPage extends javax.swing.JFrame {
         bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
         return port.createEmployee(name, position, username, password, retypePassword);
     }
+
+    private static String searchForEmployee(java.lang.String username) {
+        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
+        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
+        return port.searchForEmployee(username);
+    }
+
+    private static String deleteEmployee(java.lang.String username) {
+        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
+        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
+        return port.deleteEmployee(username);
+    }
+
+   
 
    
 }
