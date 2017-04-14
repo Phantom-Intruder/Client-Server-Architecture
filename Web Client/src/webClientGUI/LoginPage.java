@@ -1,5 +1,9 @@
 package webClientGUI;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -127,10 +131,11 @@ public class LoginPage extends javax.swing.JFrame {
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         String usrnme = username.getText();
         String psswrd = new String(password.getPassword());
-        if(usrnme.equals("") || psswrd.equals("")){
-            errorMessage.setText("Please Enter Username/Password!");
-        }else if(usrnme.equals("root") && psswrd.equals("root123")){
-            MainPage mainPage = new MainPage();
+        if(login(usrnme, psswrd)){     
+            MainPage mainPage = null;
+         
+                mainPage = new MainPage();
+          
             mainPage.show();
             this.dispose();
         }else{
@@ -164,7 +169,7 @@ public class LoginPage extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -182,4 +187,11 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField username;
     private javax.swing.JLabel usernameText;
     // End of variables declaration//GEN-END:variables
+
+    private static boolean login(java.lang.String username, java.lang.String password) {
+        bank_web_services.BankEmployeeWebService service = new bank_web_services.BankEmployeeWebService();
+        bank_web_services.EmployeeWebService port = service.getEmployeeWebServicePort();
+        return port.login(username, password);
+    }
+
 }
