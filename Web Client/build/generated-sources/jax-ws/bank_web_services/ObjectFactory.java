@@ -24,18 +24,16 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _CreateCustomerResponse_QNAME = new QName("http://bank_web_services/", "createCustomerResponse");
-    private final static QName _CreateCustomer_QNAME = new QName("http://bank_web_services/", "createCustomer");
-    private final static QName _Test_QNAME = new QName("http://bank_web_services/", "test");
-    private final static QName _DeleteData_QNAME = new QName("http://bank_web_services/", "deleteData");
-    private final static QName _SearchForCustomer_QNAME = new QName("http://bank_web_services/", "searchForCustomer");
-    private final static QName _EditCustomer_QNAME = new QName("http://bank_web_services/", "editCustomer");
-    private final static QName _GetCustomerListResponse_QNAME = new QName("http://bank_web_services/", "getCustomerListResponse");
-    private final static QName _EditCustomerResponse_QNAME = new QName("http://bank_web_services/", "editCustomerResponse");
-    private final static QName _DeleteDataResponse_QNAME = new QName("http://bank_web_services/", "deleteDataResponse");
-    private final static QName _GetCustomerList_QNAME = new QName("http://bank_web_services/", "getCustomerList");
-    private final static QName _SearchForCustomerResponse_QNAME = new QName("http://bank_web_services/", "searchForCustomerResponse");
-    private final static QName _TestResponse_QNAME = new QName("http://bank_web_services/", "testResponse");
+    private final static QName _EditEmployeeResponse_QNAME = new QName("http://bank_web_services/", "editEmployeeResponse");
+    private final static QName _DeleteEmployeeResponse_QNAME = new QName("http://bank_web_services/", "deleteEmployeeResponse");
+    private final static QName _EditEmployee_QNAME = new QName("http://bank_web_services/", "editEmployee");
+    private final static QName _LoginResponse_QNAME = new QName("http://bank_web_services/", "loginResponse");
+    private final static QName _SearchForEmployeeResponse_QNAME = new QName("http://bank_web_services/", "searchForEmployeeResponse");
+    private final static QName _SearchForEmployee_QNAME = new QName("http://bank_web_services/", "searchForEmployee");
+    private final static QName _Login_QNAME = new QName("http://bank_web_services/", "login");
+    private final static QName _DeleteEmployee_QNAME = new QName("http://bank_web_services/", "deleteEmployee");
+    private final static QName _CreateEmployee_QNAME = new QName("http://bank_web_services/", "createEmployee");
+    private final static QName _CreateEmployeeResponse_QNAME = new QName("http://bank_web_services/", "createEmployeeResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: bank_web_services
@@ -45,207 +43,173 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchForCustomer }
+     * Create an instance of {@link SearchForEmployeeResponse }
      * 
      */
-    public SearchForCustomer createSearchForCustomer() {
-        return new SearchForCustomer();
+    public SearchForEmployeeResponse createSearchForEmployeeResponse() {
+        return new SearchForEmployeeResponse();
     }
 
     /**
-     * Create an instance of {@link EditCustomer }
+     * Create an instance of {@link DeleteEmployeeResponse }
      * 
      */
-    public EditCustomer createEditCustomer() {
-        return new EditCustomer();
+    public DeleteEmployeeResponse createDeleteEmployeeResponse() {
+        return new DeleteEmployeeResponse();
     }
 
     /**
-     * Create an instance of {@link GetCustomerListResponse }
+     * Create an instance of {@link EditEmployee }
      * 
      */
-    public GetCustomerListResponse createGetCustomerListResponse() {
-        return new GetCustomerListResponse();
+    public EditEmployee createEditEmployee() {
+        return new EditEmployee();
     }
 
     /**
-     * Create an instance of {@link DeleteData }
+     * Create an instance of {@link LoginResponse }
      * 
      */
-    public DeleteData createDeleteData() {
-        return new DeleteData();
+    public LoginResponse createLoginResponse() {
+        return new LoginResponse();
     }
 
     /**
-     * Create an instance of {@link CreateCustomer }
+     * Create an instance of {@link EditEmployeeResponse }
      * 
      */
-    public CreateCustomer createCreateCustomer() {
-        return new CreateCustomer();
+    public EditEmployeeResponse createEditEmployeeResponse() {
+        return new EditEmployeeResponse();
     }
 
     /**
-     * Create an instance of {@link Test }
+     * Create an instance of {@link CreateEmployeeResponse }
      * 
      */
-    public Test createTest() {
-        return new Test();
+    public CreateEmployeeResponse createCreateEmployeeResponse() {
+        return new CreateEmployeeResponse();
     }
 
     /**
-     * Create an instance of {@link CreateCustomerResponse }
+     * Create an instance of {@link CreateEmployee }
      * 
      */
-    public CreateCustomerResponse createCreateCustomerResponse() {
-        return new CreateCustomerResponse();
+    public CreateEmployee createCreateEmployee() {
+        return new CreateEmployee();
     }
 
     /**
-     * Create an instance of {@link TestResponse }
+     * Create an instance of {@link Login }
      * 
      */
-    public TestResponse createTestResponse() {
-        return new TestResponse();
+    public Login createLogin() {
+        return new Login();
     }
 
     /**
-     * Create an instance of {@link GetCustomerList }
+     * Create an instance of {@link DeleteEmployee }
      * 
      */
-    public GetCustomerList createGetCustomerList() {
-        return new GetCustomerList();
+    public DeleteEmployee createDeleteEmployee() {
+        return new DeleteEmployee();
     }
 
     /**
-     * Create an instance of {@link SearchForCustomerResponse }
+     * Create an instance of {@link SearchForEmployee }
      * 
      */
-    public SearchForCustomerResponse createSearchForCustomerResponse() {
-        return new SearchForCustomerResponse();
+    public SearchForEmployee createSearchForEmployee() {
+        return new SearchForEmployee();
     }
 
     /**
-     * Create an instance of {@link DeleteDataResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link EditEmployeeResponse }{@code >}}
      * 
      */
-    public DeleteDataResponse createDeleteDataResponse() {
-        return new DeleteDataResponse();
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "editEmployeeResponse")
+    public JAXBElement<EditEmployeeResponse> createEditEmployeeResponse(EditEmployeeResponse value) {
+        return new JAXBElement<EditEmployeeResponse>(_EditEmployeeResponse_QNAME, EditEmployeeResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link EditCustomerResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteEmployeeResponse }{@code >}}
      * 
      */
-    public EditCustomerResponse createEditCustomerResponse() {
-        return new EditCustomerResponse();
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "deleteEmployeeResponse")
+    public JAXBElement<DeleteEmployeeResponse> createDeleteEmployeeResponse(DeleteEmployeeResponse value) {
+        return new JAXBElement<DeleteEmployeeResponse>(_DeleteEmployeeResponse_QNAME, DeleteEmployeeResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateCustomerResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EditEmployee }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "createCustomerResponse")
-    public JAXBElement<CreateCustomerResponse> createCreateCustomerResponse(CreateCustomerResponse value) {
-        return new JAXBElement<CreateCustomerResponse>(_CreateCustomerResponse_QNAME, CreateCustomerResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "editEmployee")
+    public JAXBElement<EditEmployee> createEditEmployee(EditEmployee value) {
+        return new JAXBElement<EditEmployee>(_EditEmployee_QNAME, EditEmployee.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateCustomer }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "createCustomer")
-    public JAXBElement<CreateCustomer> createCreateCustomer(CreateCustomer value) {
-        return new JAXBElement<CreateCustomer>(_CreateCustomer_QNAME, CreateCustomer.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "loginResponse")
+    public JAXBElement<LoginResponse> createLoginResponse(LoginResponse value) {
+        return new JAXBElement<LoginResponse>(_LoginResponse_QNAME, LoginResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Test }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SearchForEmployeeResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "test")
-    public JAXBElement<Test> createTest(Test value) {
-        return new JAXBElement<Test>(_Test_QNAME, Test.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "searchForEmployeeResponse")
+    public JAXBElement<SearchForEmployeeResponse> createSearchForEmployeeResponse(SearchForEmployeeResponse value) {
+        return new JAXBElement<SearchForEmployeeResponse>(_SearchForEmployeeResponse_QNAME, SearchForEmployeeResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteData }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SearchForEmployee }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "deleteData")
-    public JAXBElement<DeleteData> createDeleteData(DeleteData value) {
-        return new JAXBElement<DeleteData>(_DeleteData_QNAME, DeleteData.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "searchForEmployee")
+    public JAXBElement<SearchForEmployee> createSearchForEmployee(SearchForEmployee value) {
+        return new JAXBElement<SearchForEmployee>(_SearchForEmployee_QNAME, SearchForEmployee.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SearchForCustomer }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Login }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "searchForCustomer")
-    public JAXBElement<SearchForCustomer> createSearchForCustomer(SearchForCustomer value) {
-        return new JAXBElement<SearchForCustomer>(_SearchForCustomer_QNAME, SearchForCustomer.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "login")
+    public JAXBElement<Login> createLogin(Login value) {
+        return new JAXBElement<Login>(_Login_QNAME, Login.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditCustomer }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteEmployee }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "editCustomer")
-    public JAXBElement<EditCustomer> createEditCustomer(EditCustomer value) {
-        return new JAXBElement<EditCustomer>(_EditCustomer_QNAME, EditCustomer.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "deleteEmployee")
+    public JAXBElement<DeleteEmployee> createDeleteEmployee(DeleteEmployee value) {
+        return new JAXBElement<DeleteEmployee>(_DeleteEmployee_QNAME, DeleteEmployee.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCustomerListResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateEmployee }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "getCustomerListResponse")
-    public JAXBElement<GetCustomerListResponse> createGetCustomerListResponse(GetCustomerListResponse value) {
-        return new JAXBElement<GetCustomerListResponse>(_GetCustomerListResponse_QNAME, GetCustomerListResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "createEmployee")
+    public JAXBElement<CreateEmployee> createCreateEmployee(CreateEmployee value) {
+        return new JAXBElement<CreateEmployee>(_CreateEmployee_QNAME, CreateEmployee.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EditCustomerResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateEmployeeResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "editCustomerResponse")
-    public JAXBElement<EditCustomerResponse> createEditCustomerResponse(EditCustomerResponse value) {
-        return new JAXBElement<EditCustomerResponse>(_EditCustomerResponse_QNAME, EditCustomerResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteDataResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "deleteDataResponse")
-    public JAXBElement<DeleteDataResponse> createDeleteDataResponse(DeleteDataResponse value) {
-        return new JAXBElement<DeleteDataResponse>(_DeleteDataResponse_QNAME, DeleteDataResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCustomerList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "getCustomerList")
-    public JAXBElement<GetCustomerList> createGetCustomerList(GetCustomerList value) {
-        return new JAXBElement<GetCustomerList>(_GetCustomerList_QNAME, GetCustomerList.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SearchForCustomerResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "searchForCustomerResponse")
-    public JAXBElement<SearchForCustomerResponse> createSearchForCustomerResponse(SearchForCustomerResponse value) {
-        return new JAXBElement<SearchForCustomerResponse>(_SearchForCustomerResponse_QNAME, SearchForCustomerResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TestResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://bank_web_services/", name = "testResponse")
-    public JAXBElement<TestResponse> createTestResponse(TestResponse value) {
-        return new JAXBElement<TestResponse>(_TestResponse_QNAME, TestResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://bank_web_services/", name = "createEmployeeResponse")
+    public JAXBElement<CreateEmployeeResponse> createCreateEmployeeResponse(CreateEmployeeResponse value) {
+        return new JAXBElement<CreateEmployeeResponse>(_CreateEmployeeResponse_QNAME, CreateEmployeeResponse.class, null, value);
     }
 
 }

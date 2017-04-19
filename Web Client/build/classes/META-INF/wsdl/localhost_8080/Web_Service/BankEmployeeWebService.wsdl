@@ -4,6 +4,18 @@
 <xsd:import namespace="http://bank_web_services/" schemaLocation="http://localhost:8080/Web_Service/BankEmployeeWebService?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="searchForEmployee">
+<part name="parameters" element="tns:searchForEmployee"/>
+</message>
+<message name="searchForEmployeeResponse">
+<part name="parameters" element="tns:searchForEmployeeResponse"/>
+</message>
+<message name="login">
+<part name="parameters" element="tns:login"/>
+</message>
+<message name="loginResponse">
+<part name="parameters" element="tns:loginResponse"/>
+</message>
 <message name="createEmployee">
 <part name="parameters" element="tns:createEmployee"/>
 </message>
@@ -22,19 +34,15 @@
 <message name="deleteEmployeeResponse">
 <part name="parameters" element="tns:deleteEmployeeResponse"/>
 </message>
-<message name="login">
-<part name="parameters" element="tns:login"/>
-</message>
-<message name="loginResponse">
-<part name="parameters" element="tns:loginResponse"/>
-</message>
-<message name="searchForEmployee">
-<part name="parameters" element="tns:searchForEmployee"/>
-</message>
-<message name="searchForEmployeeResponse">
-<part name="parameters" element="tns:searchForEmployeeResponse"/>
-</message>
 <portType name="EmployeeWebService">
+<operation name="searchForEmployee">
+<input wsam:Action="http://bank_web_services/EmployeeWebService/searchForEmployeeRequest" message="tns:searchForEmployee"/>
+<output wsam:Action="http://bank_web_services/EmployeeWebService/searchForEmployeeResponse" message="tns:searchForEmployeeResponse"/>
+</operation>
+<operation name="login">
+<input wsam:Action="http://bank_web_services/EmployeeWebService/loginRequest" message="tns:login"/>
+<output wsam:Action="http://bank_web_services/EmployeeWebService/loginResponse" message="tns:loginResponse"/>
+</operation>
 <operation name="createEmployee">
 <input wsam:Action="http://bank_web_services/EmployeeWebService/createEmployeeRequest" message="tns:createEmployee"/>
 <output wsam:Action="http://bank_web_services/EmployeeWebService/createEmployeeResponse" message="tns:createEmployeeResponse"/>
@@ -47,17 +55,27 @@
 <input wsam:Action="http://bank_web_services/EmployeeWebService/deleteEmployeeRequest" message="tns:deleteEmployee"/>
 <output wsam:Action="http://bank_web_services/EmployeeWebService/deleteEmployeeResponse" message="tns:deleteEmployeeResponse"/>
 </operation>
-<operation name="login">
-<input wsam:Action="http://bank_web_services/EmployeeWebService/loginRequest" message="tns:login"/>
-<output wsam:Action="http://bank_web_services/EmployeeWebService/loginResponse" message="tns:loginResponse"/>
-</operation>
-<operation name="searchForEmployee">
-<input wsam:Action="http://bank_web_services/EmployeeWebService/searchForEmployeeRequest" message="tns:searchForEmployee"/>
-<output wsam:Action="http://bank_web_services/EmployeeWebService/searchForEmployeeResponse" message="tns:searchForEmployeeResponse"/>
-</operation>
 </portType>
 <binding name="EmployeeWebServicePortBinding" type="tns:EmployeeWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="searchForEmployee">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="login">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="createEmployee">
 <soap:operation soapAction=""/>
 <input>
@@ -77,24 +95,6 @@
 </output>
 </operation>
 <operation name="deleteEmployee">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="login">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="searchForEmployee">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

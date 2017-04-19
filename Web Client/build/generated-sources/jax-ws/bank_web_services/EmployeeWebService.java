@@ -26,6 +26,39 @@ public interface EmployeeWebService {
 
     /**
      * 
+     * @param username
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "searchForEmployee", targetNamespace = "http://bank_web_services/", className = "bank_web_services.SearchForEmployee")
+    @ResponseWrapper(localName = "searchForEmployeeResponse", targetNamespace = "http://bank_web_services/", className = "bank_web_services.SearchForEmployeeResponse")
+    @Action(input = "http://bank_web_services/EmployeeWebService/searchForEmployeeRequest", output = "http://bank_web_services/EmployeeWebService/searchForEmployeeResponse")
+    public String searchForEmployee(
+        @WebParam(name = "username", targetNamespace = "")
+        String username);
+
+    /**
+     * 
+     * @param password
+     * @param username
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "login", targetNamespace = "http://bank_web_services/", className = "bank_web_services.Login")
+    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://bank_web_services/", className = "bank_web_services.LoginResponse")
+    @Action(input = "http://bank_web_services/EmployeeWebService/loginRequest", output = "http://bank_web_services/EmployeeWebService/loginResponse")
+    public boolean login(
+        @WebParam(name = "username", targetNamespace = "")
+        String username,
+        @WebParam(name = "password", targetNamespace = "")
+        String password);
+
+    /**
+     * 
      * @param password
      * @param name
      * @param retypePassword
@@ -90,39 +123,6 @@ public interface EmployeeWebService {
     @ResponseWrapper(localName = "deleteEmployeeResponse", targetNamespace = "http://bank_web_services/", className = "bank_web_services.DeleteEmployeeResponse")
     @Action(input = "http://bank_web_services/EmployeeWebService/deleteEmployeeRequest", output = "http://bank_web_services/EmployeeWebService/deleteEmployeeResponse")
     public String deleteEmployee(
-        @WebParam(name = "username", targetNamespace = "")
-        String username);
-
-    /**
-     * 
-     * @param password
-     * @param username
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "login", targetNamespace = "http://bank_web_services/", className = "bank_web_services.Login")
-    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://bank_web_services/", className = "bank_web_services.LoginResponse")
-    @Action(input = "http://bank_web_services/EmployeeWebService/loginRequest", output = "http://bank_web_services/EmployeeWebService/loginResponse")
-    public boolean login(
-        @WebParam(name = "username", targetNamespace = "")
-        String username,
-        @WebParam(name = "password", targetNamespace = "")
-        String password);
-
-    /**
-     * 
-     * @param username
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "searchForEmployee", targetNamespace = "http://bank_web_services/", className = "bank_web_services.SearchForEmployee")
-    @ResponseWrapper(localName = "searchForEmployeeResponse", targetNamespace = "http://bank_web_services/", className = "bank_web_services.SearchForEmployeeResponse")
-    @Action(input = "http://bank_web_services/EmployeeWebService/searchForEmployeeRequest", output = "http://bank_web_services/EmployeeWebService/searchForEmployeeResponse")
-    public String searchForEmployee(
         @WebParam(name = "username", targetNamespace = "")
         String username);
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://localhost:8080/Web_Service/BankEmployeeWebService?wsdl" uri="xml-resources/web-service-references/BankEmployeeWebService/wsdl/localhost_8080/Web_Service/BankEmployeeWebService.wsdl"/>
-    <system systemId="http://localhost:8080/Web_Service/BankEmployeeWebService?xsd=1" uri="xml-resources/web-service-references/BankEmployeeWebService/wsdl/localhost_8080/Web_Service/BankEmployeeWebService.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/Web_Service/CustomerWebService?wsdl" uri="xml-resources/web-service-references/CustomerWebService/wsdl/localhost_8080/Web_Service/CustomerWebService.wsdl"/>
     <system systemId="http://localhost:8080/Web_Service/CustomerWebService?xsd=1" uri="xml-resources/web-service-references/CustomerWebService/wsdl/localhost_8080/Web_Service/CustomerWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Web_Service/BankEmployeeWebService?wsdl" uri="xml-resources/web-service-references/BankEmployeeWebService/wsdl/localhost_8080/Web_Service/BankEmployeeWebService.wsdl"/>
+    <system systemId="http://localhost:8080/Web_Service/BankEmployeeWebService?xsd=1" uri="xml-resources/web-service-references/BankEmployeeWebService/wsdl/localhost_8080/Web_Service/BankEmployeeWebService.xsd_1.xsd"/>
 </catalog>

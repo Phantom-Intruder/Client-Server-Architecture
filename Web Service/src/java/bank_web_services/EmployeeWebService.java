@@ -24,8 +24,9 @@ public class EmployeeWebService {
 
     @WebMethod(operationName = "login")
     public boolean login(@WebParam(name = "username") String username, @WebParam(name = "password") String password) {
-        System.out.println("asdsd323");
-        if(username.equals("root") && password.equals("root123")){
+        String userData = searchForEmployee(username);
+        String[] parts = userData.split(",");
+        if((username.equals("root") && password.equals("root123"))||(username.equals(parts[2]) && password.equals(parts[3]))){
             return true;
         }else{
             return false;

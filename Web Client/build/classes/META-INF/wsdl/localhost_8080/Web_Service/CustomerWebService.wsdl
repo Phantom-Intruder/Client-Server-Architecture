@@ -16,17 +16,17 @@
 <message name="searchForCustomerResponse">
 <part name="parameters" element="tns:searchForCustomerResponse"/>
 </message>
-<message name="createCustomer">
-<part name="parameters" element="tns:createCustomer"/>
-</message>
-<message name="createCustomerResponse">
-<part name="parameters" element="tns:createCustomerResponse"/>
-</message>
 <message name="getCustomerList">
 <part name="parameters" element="tns:getCustomerList"/>
 </message>
 <message name="getCustomerListResponse">
 <part name="parameters" element="tns:getCustomerListResponse"/>
+</message>
+<message name="deleteData">
+<part name="parameters" element="tns:deleteData"/>
+</message>
+<message name="deleteDataResponse">
+<part name="parameters" element="tns:deleteDataResponse"/>
 </message>
 <message name="editCustomer">
 <part name="parameters" element="tns:editCustomer"/>
@@ -34,11 +34,11 @@
 <message name="editCustomerResponse">
 <part name="parameters" element="tns:editCustomerResponse"/>
 </message>
-<message name="deleteData">
-<part name="parameters" element="tns:deleteData"/>
+<message name="createCustomer">
+<part name="parameters" element="tns:createCustomer"/>
 </message>
-<message name="deleteDataResponse">
-<part name="parameters" element="tns:deleteDataResponse"/>
+<message name="createCustomerResponse">
+<part name="parameters" element="tns:createCustomerResponse"/>
 </message>
 <portType name="CustomerWebService">
 <operation name="test">
@@ -49,21 +49,21 @@
 <input wsam:Action="http://bank_web_services/CustomerWebService/searchForCustomerRequest" message="tns:searchForCustomer"/>
 <output wsam:Action="http://bank_web_services/CustomerWebService/searchForCustomerResponse" message="tns:searchForCustomerResponse"/>
 </operation>
-<operation name="createCustomer">
-<input wsam:Action="http://bank_web_services/CustomerWebService/createCustomerRequest" message="tns:createCustomer"/>
-<output wsam:Action="http://bank_web_services/CustomerWebService/createCustomerResponse" message="tns:createCustomerResponse"/>
-</operation>
 <operation name="getCustomerList">
 <input wsam:Action="http://bank_web_services/CustomerWebService/getCustomerListRequest" message="tns:getCustomerList"/>
 <output wsam:Action="http://bank_web_services/CustomerWebService/getCustomerListResponse" message="tns:getCustomerListResponse"/>
+</operation>
+<operation name="deleteData">
+<input wsam:Action="http://bank_web_services/CustomerWebService/deleteDataRequest" message="tns:deleteData"/>
+<output wsam:Action="http://bank_web_services/CustomerWebService/deleteDataResponse" message="tns:deleteDataResponse"/>
 </operation>
 <operation name="editCustomer">
 <input wsam:Action="http://bank_web_services/CustomerWebService/editCustomerRequest" message="tns:editCustomer"/>
 <output wsam:Action="http://bank_web_services/CustomerWebService/editCustomerResponse" message="tns:editCustomerResponse"/>
 </operation>
-<operation name="deleteData">
-<input wsam:Action="http://bank_web_services/CustomerWebService/deleteDataRequest" message="tns:deleteData"/>
-<output wsam:Action="http://bank_web_services/CustomerWebService/deleteDataResponse" message="tns:deleteDataResponse"/>
+<operation name="createCustomer">
+<input wsam:Action="http://bank_web_services/CustomerWebService/createCustomerRequest" message="tns:createCustomer"/>
+<output wsam:Action="http://bank_web_services/CustomerWebService/createCustomerResponse" message="tns:createCustomerResponse"/>
 </operation>
 </portType>
 <binding name="CustomerWebServicePortBinding" type="tns:CustomerWebService">
@@ -86,7 +86,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="createCustomer">
+<operation name="getCustomerList">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -95,7 +95,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getCustomerList">
+<operation name="deleteData">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -113,7 +113,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="deleteData">
+<operation name="createCustomer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
